@@ -26,3 +26,18 @@ Design and implement a CI/CD pipeline that builds, tests and deploys either a si
 * Use free version of CI/CD tools (e.g. GitLab, CircleCI, Travis CI etc.)
 * Use any open source application/service written in any language
 * Use AWS Free Tier if cloud resources are required
+
+## Implemenation
+The pipeline is implemented using CircleCI and Terraform. It is designed to automate the build, test, and deployment process for a single-page web application to AWS.
+### Components
+* CircleCI: A continuous integration and continuous deployment platform used to automate the software delivery process.
+* Terraform: An infrastructure as code tool used to provision and manage AWS resources.
+* AWS S3: A cloud storage service used to host the web application.
+### Pipeline Workflow
+* Build Stage: Dependencies are installed and the web application is built using Node.js.
+The built files are persisted to the workspace for later use.
+* Test Stage: Tests for the web application are executed to ensure its functionality and quality.
+* Deploy Stage: Terraform is used to provision the necessary infrastructure on AWS.
+* The web application files are deployed to an AWS S3 bucket.
+### Source Code
+The source code for the web application, Terraform configuration files, and CircleCI configuration file are stored in the repository.
